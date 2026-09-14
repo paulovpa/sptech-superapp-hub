@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhor Horário para Assistir Netflix: Evite Travamentos!</title>
+</head>
+<body>
+    <h1>Melhor Horário para Assistir Netflix: Evite Travamentos!</h1>
+    <label for="input_horario" >Qual hora do dia você acessa Netflix?</label>
+    <input type="text" id="input_horario" placeholder="Por exemplo: 19"><br>
+    <button onclick="verificar()">Ver recomendação</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let horario = Number(input_horario.value);
+
+        if (horario >=19 && horario <=21) {
+            div_mensagem.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${horario}`;
+        } else {
+            div_mensagem.innerHTML = `O horário ${horario} é adequado para assistir sua série favorita!`;
+        }
+    }
+</script>

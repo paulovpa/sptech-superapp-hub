@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recarga Fidelidade Metrô: Economize com Descontos Especiais!
+</title>
+</head>
+<body>
+    <h1>Recarga Fidelidade Metrô: Economize com Descontos Especiais!</h1>
+    <label for="input_passagens">Insira a quantidade de passagens desejadas:</label>
+    <input type="text" id="input_passagens"><br>
+    <button onclick="verificar()">Comprar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let qtdPassagens = Number(input_passagens.value);
+        let valorPassagem = 4.40;
+        let desconto1 = valorPassagem - (valorPassagem * 0.03);
+        let desconto2 = valorPassagem - (valorPassagem * 0.05);
+        let desconto3 = valorPassagem - (valorPassagem * 0.07);
+        let passagem1 = qtdPassagens * desconto1;
+        let passagem2 = qtdPassagens * desconto2;
+        let passagem3 = qtdPassagens * desconto3;
+
+
+
+        if (qtdPassagens >=8 && qtdPassagens <=50) {
+            
+            if (qtdPassagens >=8 && qtdPassagens <=19) {
+                div_mensagem.innerHTML = `Total a pagar: R$${passagem1.toFixed(2)}`;
+            } else if (qtdPassagens >=20 && qtdPassagens <=49) {
+                div_mensagem.innerHTML = `Total a pagar: R$${passagem2.toFixed(2)}`;
+            } else {
+                div_mensagem.innerHTML = `Total a pagar: R$${passagem3.toFixed(2)}`;
+
+            }
+        } else {
+            alert('Quantidade inválida para o Fidelidade!');
+        }
+    }
+</script>

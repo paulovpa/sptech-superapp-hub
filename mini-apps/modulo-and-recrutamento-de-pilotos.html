@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Pilotos: Você Tem a Altura Ideal?</title>
+</head>
+<body>
+    <h1>Seleção de Pilotos: Você Tem a Altura Ideal?</h1>
+    <label for="input_alturainicialD">Qual a altura inicial desejada?</label>
+    <input type="text" id="input_alturainicialD"><br>
+    <label for="input_alturafinalD">Qual a altura final desejada?</label>
+    <input type="text" id="input_alturafinalD"><br><br>
+    <label for="input_nome">Nome do candidato?</label>
+    <input type="text" id="input_nome"><br>
+    <label for="input_alturacand">Qual a altura do candidato?</label>
+    <input type="text" id="input_alturacand"><br><br>
+    <button onclick="verificar()">Verificar Candidato</button><br><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    
+ function verificar() {
+    let alturaIniD = Number(input_alturainicialD.value);
+    let alturaFinD = Number(input_alturafinalD.value);
+    let nome = input_nome.value;
+    let alturaCand = Number(input_alturacand.value);
+
+    
+    if(alturaIniD <1 && alturaFinD<alturaIniD) {
+        div_mensagem.innerHTML += `Intervalo da altura de seleção é inválida! A altura inicial deve ser maior que 1 e a altura final deve ser maior que a altura inicial`;
+    } else if (alturaIniD >1 && alturaFinD>alturaIniD) {
+        if (alturaCand>alturaIniD && alturaCand<alturaFinD) {
+            div_mensagem.innerHTML += `O candidato ${nome}, com altura de ${alturaCand} metros, participará do processo de seleção de piloto<br>`;
+        } else {
+            div_mensagem.innerHTML += `Infelizmente, o candidato ${nome}, com altura de ${alturaCand} metros, não atende os requisitos da seleção<br>`;
+        }
+    
+    }
+ }
+</script>

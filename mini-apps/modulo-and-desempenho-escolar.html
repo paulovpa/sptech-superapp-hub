@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho Escolar: Como Está Sua Nota?</title>
+</head>
+<body>
+    <h1>Desempenho Escolar: Como Está Sua Nota?</h1>
+    <label for="input_nota">Qual a nota?</label>
+    <input type="text" id="input_nota"><br>
+    <button onclick="verificar()">Avaliar aluno</button>
+</body>
+</html>
+<script>
+    function verificar() {
+        let nota = Number(input_nota.value);
+
+        if (nota <6) {
+            alert('Aluno não aprovado');
+        } else if (nota >=8.5 && nota <=10) {
+            alert('Aluno Exemplar!');
+        } else {
+            alert('Aluno comum e aprovado');
+        }
+    }
+</script>

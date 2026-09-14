@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auxílio Emergencial Covid-19</title>
+</head>
+<body>
+    <h1>Auxílio Emergencial Covid-19</h1>
+    <label for="input_rendaind">Qual o valor da renda individual?</label>
+    <input type="text" id="input_rendaind"><br>
+    <label for="input_rendafam">Qual o valor da renda familiar?</label>
+    <input type="text" id="input_rendafam"><br>
+    <button onclick="verificar()">Terei o benefício</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        let rendaind = Number(input_rendaind.value);
+        let rendafam = Number(input_rendafam.value);
+
+        if (rendaind <=2000 || rendafam<=3000) {
+            div_mensagem.innerHTML = `Você terá direito ao auxílio`;
+        } else {
+            div_mensagem.innerHTML = `Sem direito ao auxílio`;
+
+        }
+    }
+</script>

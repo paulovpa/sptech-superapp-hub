@@ -1,0 +1,32 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(241, 241, 241);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hub-header {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #AAAA;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 20px;
+    color: rgb(27, 27, 27);
+    padding: 20px;
+    text-align: center;
+}
+
+.card-indicador {
+    padding: 10px;
+}

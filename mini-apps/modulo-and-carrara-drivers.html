@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrara Drivers</title>
+</head>
+<body>
+    <h1>Carrara Drivers</h1>
+    <label for="input_nome">Nome do passageiro:</label>
+    <input type="text" id="input_nome"><br>
+    <label for="input_distancia">Distância em KM:</label>
+    <input type="text" id="input_distancia"><br>
+    <label for="input_bandeira">Bandeira da Corrida:</label>
+    <input type="number" min=1 max=3 id="input_bandeira"><br>
+    <label for="input_horario">Horário da Corrida:</label>
+    <input type="number" min="0" max="23" id="input_horario"><br><br>
+    <button onclick="calcular()">Calcular corrida</button><br><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        let nome = input_nome.value;
+        let distancia = Number(input_distancia.value);
+        let bandeira = Number(input_bandeira.value);
+        let horario = Number(input_horario.value);
+        let valorCorrida = 1.25;
+        let bandeira1A = distancia * (valorCorrida * 1.05);
+        let bandeira1B = distancia * (valorCorrida * 1.10);
+        let bandeira1C = distancia * (valorCorrida * 1.15);
+        let bandeira2A = distancia * (valorCorrida * 1.10);
+        let bandeira2B = distancia * (valorCorrida * 1.20);
+        let bandeira2C = distancia * (valorCorrida * 1.30);
+        let bandeira3A = distancia * (valorCorrida * 1.15);
+        let bandeira3B = distancia * (valorCorrida * 1.30);
+        let bandeira3C = distancia * (valorCorrida * 1.45);
+        
+        
+        if (bandeira =='1') {
+            if (horario >=0 && horario <=6) {
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira1A}`;
+            } else if (horario >=7 && horario <=12) {
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira1B}`;
+            } else if (horario >=13 && horario <=23){
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira1C}`;
+
+            }
+        } else if (bandeira =='2') {
+            if (horario >=0 && horario <=6) {
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira2A}`;
+            } else if (horario >=7 && horario <=12) {
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira2B}`;
+            } else if (horario >=13 && horario <=23){
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira2C}`;
+
+            }
+        } else if (bandeira =='3') {
+            if (horario >=0 && horario <=6) {
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira3A}`;
+            } else if (horario >=7 && horario <=12) {
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira3B}`;
+            } else if (horario >=13 && horario <=23){
+                div_mensagem.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${bandeira}, percorrerá ${distancia} km e o total da corrida será de R$${bandeira3C}`;
+
+            }
+        }
+        
+
+    }
+</script>

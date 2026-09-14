@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Parcelamento de Compra</title>
+</head>
+<body>
+    <h1>Análise de Parcelamento de Compra</h1>
+    <label for="select_pagamento"></label>
+    <select name="" id="select_pagamento">
+        <option selected disabled value="">Selecione uma opção</option>
+        <option value="1">Dinheiro</option>
+        <option value="2">Cartão de débito</option>
+        <option value="3">Cartão de crédito</option>
+        <option value="4">Boleto</option>
+    </select>
+
+    <button onclick="analisar()">Analisar compra</button><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        let pagamento = select_pagamento.value;
+
+        if (pagamento =='1' || pagamento =='2') {
+            div_mensagem.innerHTML = `Você terá que pagar  a vista`;
+        } else {
+            div_mensagem.innerHTML = `Pagamento poderá ser parcelado`;
+
+        }
+    }
+</script>
