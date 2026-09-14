@@ -1,9 +1,9 @@
 # SPTech Super-App Hub
-
 O **SPTech Super-App Hub** é uma plataforma centralizada de microsserviços desenvolvida para executar múltiplos **Mini-Apps** utilitários. O hub funciona como um painel central que organiza várias ferramentas independentes em um só lugar, facilitando o acesso do usuário.
+
 ---
 
-## 🧠 Abordagem Arquitetural
+## Abordagem Arquitetural
 
 O site foi feito de forma modular. Em vez de criar uma única página gigante e pesada, cada calculadora funciona separadamente. Ao clicar, o módulo abre em uma nova aba do navegador (target="_blank"), deixando o sistema muito mais rápido e organizado.
 
@@ -14,6 +14,7 @@ Aplicações que usam lógica de **validação condicional restritiva**. O siste
 
 ### Módulos baseados em Lógica OR (`||`)
 Aplicações que usam a lógica de **fluxos decisão alternativa**. O sistema aprova o resultado se **pelo menos uma** das condições for verdadeira.
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
